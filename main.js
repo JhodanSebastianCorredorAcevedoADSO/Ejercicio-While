@@ -1,31 +1,29 @@
 addEventListener("DOMContentLoaded", ()=>{
 
-/// En una granja se requiere saber alguna información para determinar el precio de venta por cada kilo
-/// de huevo. precio se determina a traves del promedio de calidad de las N gallinas que hay en la
-/// granja. La calidad de cada gallina se obtiene según la formula:
+/// 2. Hacer un algoritmo que al ingresar 2 números por la pantalla y se calcule la suma, resta, multiplicación
+/// y división. El proceso debe terminar cuando se hallan realizado 10 procesos (Hacer uso de
+/// contadores`)
 
-/// calidad = (peso de la gallina * altura de la gallina)/Numero de huevos que pone;
 
-let can = Number(prompt("Ingrese la cantidad de gallinas que hay en la granja: "))
+let CP = 0 
 
-let acum = 0
+while (CP < 10){
 
-/// SENTENCIA WHILE
+    let n1 = Number(prompt("Ingrese un numero (n1): ")) 
+    let n2 = Number(prompt("Ingrese un numero diferente de cero (n2): "))
 
-while(can > 0){
-    // pedimos datos para llevar a cabo la operacion
-    let peso=Number(prompt("peso de la gallina (Kg) "))
+    let suma = n1 + n2  
+    let multiplicacion = n1 * n2
+    let resta = n1 - n2
+    let division = n1 / n2
 
-    let altura=Number(prompt("altura de la gallina (Cm) "))
 
-    let numero=Number(prompt("numero de huevos que pone "))
-
-    let calidad = (peso * altura )/numero    
-
-    acum += numero
-
-    can -= 1 
-}
-console.log(`calidad de la gallina: ${can}`)
+    alert(`${n1} + ${n2} = ${suma}`)  
+    alert(`${n1} * ${n2} = ${multiplicacion}`)
+    alert(`${n1} - ${n2} = ${resta}`)
+    alert(`${n1} / ${n2} = ${division}`)
+    
+    CP+=1
+    }
 
 })
