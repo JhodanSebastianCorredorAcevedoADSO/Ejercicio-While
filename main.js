@@ -1,41 +1,26 @@
 addEventListener("DOMContentLoaded", ()=>{
 
-/// El profesor de una materia desea conocer la cantidad de sus alumnos que no 
-/// tienen derecho al examen de nivelación. Diseñe un pseudocódigo que lea las 
-/// calificaciones obtenidas en las 5 unidades por cada uno de los 40 alumnos y 
-/// escriba la cantidad de ellos que no tienen derecho al examen de nivelación.
+/// Un avión que viaja 800 Km/hr. Dispara un proyectil auto impulsado, en 
+/// el momento del disparo, el avión hace un giro de 90 grados y acelera a 
+/// 20 mtrs/seg2. El proyectil sigue su curso, acelerando a 10 mtrs./seg2. 
+/// Diseñe un pseudocódigo que escriba cada segundo, la distancia que separa 
+/// al avión del proyectil, hasta que estén a 10,000 mtrs. o más.
 
-let estudiantes = 0
+let distancia = 0
 
-let calipromedio = 0
+let tiempo = 0
 
-let derepresentar = 0
-
-while(estudiantes <40){
+while(distancia < 10000){
     
-        /// pedimos datos para llevar a cabo la operacion
-        cali1 = String(prompt("calificacion: "))
-        cali2 = String(prompt("calificacion: "))
-        cali3 = String(prompt("calificacion: "))
-        cali4 = String(prompt("calificacion: "))
-        cali5 = String(prompt("calificacion: "))
-        
-        tt = (cali1 + cali2 + cali3 + cali3 + cali4 + cali5)/5
+    tiempo += 1
     
-        if (tt < 2.5){
-            calipromedio += 1
-        
-        }else{
-            
-            derepresentar += 1
-            
-            estudiantes += 1
-        }
-        break
-
+    a = (800 * tiempo) + (20 * tiempo ** 2)/2
+    
+    b = (800 * tiempo) + (10 * tiempo ** 2)/2
+    
+    distancia = Math.sqrt (a ** 2 + b ** 2)
+    
 }
-
-console.log("derecho al examen", derepresentar)
-console.log("no derecho al examen", calipromedio)
-
+    console.log("Segundo:", tiempo)
+    console.log("Distancia", Math.ceil(distancia, 2))
 })
