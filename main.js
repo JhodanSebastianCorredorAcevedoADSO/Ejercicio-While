@@ -1,43 +1,45 @@
 addEventListener("DOMContentLoaded", ()=>{
 
-/// Una compañía de seguros tiene contratados a n vendedores. Cada uno hace tres
-/// ventas a la semana. Su política de pagos es que un vendedor recibe un sueldo
-/// base, y un 10% extra por comisiones de sus ventas. El gerente de su compañía 
-/// desea saber cuanto dinero obtendrá en la semana cada vendedor por concepto 
-/// de comisiones por las tres ventas realizadas, y cuanto tomando en cuenta su
-/// sueldo base y sus comisiones.
+/// Diseñar un pseudocódigo que calcule el promedio ponderado para alumno del 
+/// ITT. El cálculo se hace de la siguiente forma: Se multiplica cada calificación
+/// por los créditos de cada materia El resultado anterior se suma con los
+/// resultados de todas las materias, por separado se suman los créditos de cada
+/// materia y finalmente se divide la suma de todas las materias por sus respectivos
+/// créditos, entre la suma de todos los créditos. (materias: Fundamentos, BD y ética).
 
-let vendedor1 
-let vendedor2 
+let calificacion = 0
+let promedio = 0 
+let materias = 0
+let total = 0 
 
-let sueldoB = 1000000
+///pedimos datos
 
-let sueldo = 0
-
-let comision = 0.10
-let comision1 
-let comision2 
-let comisiones
-
-/// numeros de ventas para poder obtener las comisiones mensuales
-
-while (sueldo < 1000000){
+califi1 = Number(prompt("calificacion "))
+califi2 = Number(prompt("calificacion "))
+califi3 = Number(prompt("calificacion "))
     
-    comisiones = Number(prompt("comisiones al mes: "))
+materia1 = Number(prompt("credito de la materia "))
+materia2 = Number(prompt("credito de la materia "))
+materia3 = Number(prompt("credito de la materia "))
     
-    vendedor1 = Number(prompt("precio total mensual de las comisiones: " ))
-    vendedor2 = Number(prompt("precio total mensual de las comisiones: " ))
     
-    ///calculando el valor de la comision total por mes 
-    comision1 = vendedor1 * comisiones * 0.10
-    comision2 = vendedor2 * comisiones * 0.10
+while(promedio == 0 ){
     
-    break 
+        materias = (materia1 + materia2 + materia3) / 3
+        mult1 = califi1 * materia1
+        mult2 = califi2 * materia2
+        mult3 = califi3 * materia3
+    
+        suma = materias + mult1 + mult2 + mult3
+        break
 }
-/// imprimir el sueldo mensual y la suma de las comisiones
 
-console.log("sueldo base: ", sueldoB)
-console.log("precio mensual de la comison: ", comision1 + sueldoB)
-console.log("precio mensual de la comision: ", comision2 + sueldoB)
+console.log("suma de materias ", materias)
+console.log("total ", mult1)
+console.log("total ", mult2)
+console.log("total ", mult3)
+console.log("sumas ", suma)
+
+
 
 })
