@@ -1,26 +1,43 @@
 addEventListener("DOMContentLoaded", ()=>{
 
-/// Un avión que viaja 800 Km/hr. Dispara un proyectil auto impulsado, en 
-/// el momento del disparo, el avión hace un giro de 90 grados y acelera a 
-/// 20 mtrs/seg2. El proyectil sigue su curso, acelerando a 10 mtrs./seg2. 
-/// Diseñe un pseudocódigo que escriba cada segundo, la distancia que separa 
-/// al avión del proyectil, hasta que estén a 10,000 mtrs. o más.
+/// Una compañía de seguros tiene contratados a n vendedores. Cada uno hace tres
+/// ventas a la semana. Su política de pagos es que un vendedor recibe un sueldo
+/// base, y un 10% extra por comisiones de sus ventas. El gerente de su compañía 
+/// desea saber cuanto dinero obtendrá en la semana cada vendedor por concepto 
+/// de comisiones por las tres ventas realizadas, y cuanto tomando en cuenta su
+/// sueldo base y sus comisiones.
 
-let distancia = 0
+let vendedor1 
+let vendedor2 
 
-let tiempo = 0
+let sueldoB = 1000000
 
-while(distancia < 10000){
+let sueldo = 0
+
+let comision = 0.10
+let comision1 
+let comision2 
+let comisiones
+
+/// numeros de ventas para poder obtener las comisiones mensuales
+
+while (sueldo < 1000000){
     
-    tiempo += 1
+    comisiones = Number(prompt("comisiones al mes: "))
     
-    a = (800 * tiempo) + (20 * tiempo ** 2)/2
+    vendedor1 = Number(prompt("precio total mensual de las comisiones: " ))
+    vendedor2 = Number(prompt("precio total mensual de las comisiones: " ))
     
-    b = (800 * tiempo) + (10 * tiempo ** 2)/2
+    ///calculando el valor de la comision total por mes 
+    comision1 = vendedor1 * comisiones * 0.10
+    comision2 = vendedor2 * comisiones * 0.10
     
-    distancia = Math.sqrt (a ** 2 + b ** 2)
-    
+    break 
 }
-    console.log("Segundo:", tiempo)
-    console.log("Distancia", Math.ceil(distancia, 2))
+/// imprimir el sueldo mensual y la suma de las comisiones
+
+console.log("sueldo base: ", sueldoB)
+console.log("precio mensual de la comison: ", comision1 + sueldoB)
+console.log("precio mensual de la comision: ", comision2 + sueldoB)
+
 })
