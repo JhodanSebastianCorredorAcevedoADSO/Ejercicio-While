@@ -1,45 +1,35 @@
 addEventListener("DOMContentLoaded", ()=>{
 
-/// Diseñar un pseudocódigo que calcule el promedio ponderado para alumno del 
-/// ITT. El cálculo se hace de la siguiente forma: Se multiplica cada calificación
-/// por los créditos de cada materia El resultado anterior se suma con los
-/// resultados de todas las materias, por separado se suman los créditos de cada
-/// materia y finalmente se divide la suma de todas las materias por sus respectivos
-/// créditos, entre la suma de todos los créditos. (materias: Fundamentos, BD y ética).
+/// Diseñe un algoritmo que determine el resultado de la elección del representante estudiantil de la
+/// universidad X, para ello se presentaron tres candidatos A, B, y C.
+/// Para ganar la elección se debe obtener como mínimo el 51%.
+/// En caso que no haya un ganador se repite la elección en una segunda vuelta.
+/// van a la segunda vuelta los dos candidatos que obtengan la más alta votación.
+/// Se anula la elección en caso de producirse un empate doble por el segundo lugar o un empate triple.
 
-let calificacion = 0
-let promedio = 0 
-let materias = 0
-let total = 0 
 
-///pedimos datos
+vote1 = Number(prompt("votos por A:"))
 
-califi1 = Number(prompt("calificacion "))
-califi2 = Number(prompt("calificacion "))
-califi3 = Number(prompt("calificacion "))
+vote2 = Number(prompt("votos por B:"))
+
+vote3 = Number(prompt("votos por C:"))
+
+tt = vote1 + vote2 + vote3
+
+console.log("cantidad de votantes: ", tt)
+
+if (vote1 >= vote2 && vote1 > vote3){
     
-materia1 = Number(prompt("credito de la materia "))
-materia2 = Number(prompt("credito de la materia "))
-materia3 = Number(prompt("credito de la materia "))
+    console.log("Gano A")
+
+}else if(vote2 >= vote1 && vote2 > vote3){
+
+    console.log("Gano B")
+
+}else if(vote3 >= vote1 && vote3 > vote2){
     
-    
-while(promedio == 0 ){
-    
-        materias = (materia1 + materia2 + materia3) / 3
-        mult1 = califi1 * materia1
-        mult2 = califi2 * materia2
-        mult3 = califi3 * materia3
-    
-        suma = materias + mult1 + mult2 + mult3
-        break
+    console.log("Gano C")
+
 }
-
-console.log("suma de materias ", materias)
-console.log("total ", mult1)
-console.log("total ", mult2)
-console.log("total ", mult3)
-console.log("sumas ", suma)
-
-
 
 })
