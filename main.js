@@ -16,6 +16,10 @@ vote3 = Number(prompt("votos por C:"))
 
 tt = vote1 + vote2 + vote3
 
+console.log("cantidad de votos por A: ", vote1)
+console.log("cantidad de votos por B:", vote2)
+console.log("cantidad de votos por C:", vote3)
+
 console.log("cantidad de votantes: ", tt)
 
 if (vote1 >= vote2 && vote1 > vote3){
